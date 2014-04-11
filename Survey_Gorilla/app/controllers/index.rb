@@ -25,6 +25,6 @@ end
 #   erb :survey_options
 # end
 
-# get '/create_survey' do
-#   erb :create_survey
-# end
+get '/create_survey' do
+  erb :create_survey
+end
