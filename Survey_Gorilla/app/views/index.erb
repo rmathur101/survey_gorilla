@@ -1,23 +1,61 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to Survey Gorilla</h1>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <h3>Please login:</h3>
+  <form class="form-horizontal" role="form" action="/user" method="post">
+
+      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail3" name='email' placeholder="Email">
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword3" name='password'placeholder="Password">
+
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div><br>
+  </form>
+
+  <h3>Create an account:</h3>
+
+  <form class="form-horizontal" role="form" action="/new_user" method="post">
+  <div>
+    <form action="/new" method="post" >
+      Name: <input type="text" name="name"><br />
+      Email: <input type="text" name="email"><br />
+      Password: <input type="password" name="password"><br />
+      Confirm password: <input type="password" name="password_confirmation"><br /><br />
+      <input type="submit" name="submit" value="Sign Up">
+
+    </form>
+  </div>
 </div>
+
+
+
+
+
+
+<!-- post '/new' do
+  @user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+  session[:user_id] = @user.id
+  redirect '/'
+end
+
+
+post '/user' do
+ @user = User.find_by_email(params[:email])
+
+  if @user &&  @user.authenticate(params[:password])
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    @error = "Wrong information, You fail at life!"
+    erb :login
+  end
+end
+
+
+get '/logout' do
+  session.clear
+redirect '/'
+end -->
