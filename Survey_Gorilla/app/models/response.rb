@@ -1,3 +1,7 @@
 class Response < ActiveRecord::Base
-  # Remember to create a migration!
+
+  belongs_to :choice
+  belongs_to :round
+  delegate :question, to: :choice # belongs_to won't work here.
+
 end
