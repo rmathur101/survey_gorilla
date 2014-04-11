@@ -13,5 +13,9 @@ def total_responses_by_choice(choice_id)
 end
 
 def percentage_of_responses(question_id, choice_id)
-  (total_responses_by_choice(choice_id) / total_responses_by_question(question_id)) * 100
+  if total_responses_by_question(question_id) != 0
+    ((total_responses_by_choice(choice_id).to_f / total_responses_by_question(question_id).to_f) * 100).floor
+  else
+    return 0
+  end
 end
