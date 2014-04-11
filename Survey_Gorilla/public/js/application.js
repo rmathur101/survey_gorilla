@@ -1,7 +1,13 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  
 });
+
+
+
+
+
+// THIS CAN BE USED IN YOUR ERB FILE AND CAN YET ANOTHER WAY TO TRANSFER INFORMATION FROM YOUR SERVER TO THE DOM 
+// <script type = "text/javascript">
+//   var person = "nate";
+//   var currentUserName = "<%= 2+2 %>"; 
+// </script>
