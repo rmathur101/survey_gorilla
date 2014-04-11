@@ -38,3 +38,36 @@
   </div>
 </div>
 
+
+
+
+
+
+
+
+<!-- post '/new' do
+  @user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+  session[:user_id] = @user.id
+  redirect '/'
+end
+
+
+post '/user' do
+ @user = User.find_by_email(params[:email])
+
+  if @user &&  @user.authenticate(params[:password])
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    @error = "Wrong information, You fail at life!"
+    erb :login
+  end
+end
+
+
+get '/logout' do
+  session.clear
+redirect '/'
+end -->
+
+

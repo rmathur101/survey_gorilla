@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
     $("#check_email").hide();
     $("#check_password").hide();
 
@@ -76,9 +74,7 @@ $(document).ready(function() {
 
     option_counter -= 1
    });
+
 });
-
-
-
 
 
