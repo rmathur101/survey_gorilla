@@ -11,8 +11,8 @@ end
 post '/push_survey_data' do
   # assume session[:user_id] gives you the user_id
   # user_id = session[:user_id]
-  @user = User.find(1)
-  user_id = User.first.id;
+  @user = User.find(session[:user_id])
+  user_id = session[:user_id]
 
   # Round.create!() The only thing being passed in is survey_id and user_id
   # Response.create!() Pass in Round.id (from last round (created above)) and Choice.id
