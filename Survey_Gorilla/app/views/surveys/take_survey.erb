@@ -10,14 +10,13 @@
 
       <% question.choices.each do |choice| %>
 
-        <input type="radio" name="<%= question.id %>" value="<%= choice.choice %>"><%= choice.choice %><br>
+        <input type="radio" name="<%= question.id %>" value="<%= choice.id %>"><%= choice.choice %><br>
 
       <% end %>
 
   <% end %>
   <br>
-
-  <form action="/push_survey_data" method="POST">
+    <input type="hidden" name="survey_id" value="<%= @survey.id %>">
     <input type="submit" value="Submit Survey">
   </form>
 
