@@ -1,6 +1,10 @@
 get '/' do
   # Look in app/views/index.erb
-  erb :index
+  if logged_in?
+    redirect to "/users/dashboard"
+  else
+    erb :index
+  end
 end
 
 
@@ -16,3 +20,4 @@ post "/surveys/delete" do
   survey = Survey.find(params[:id])
   survey.destroy
 end
+

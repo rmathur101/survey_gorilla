@@ -2,7 +2,8 @@
 
 
  <h1><%= @user.name %>'s Dashboard</h1>
-  <button href="#">Create Survey Now</button>
+
+  <form action="/create_survey" method="get"><input type="submit" value="Create a new survey!"></form>
   <!-- Going to have to link to the appropriate view -->
   <div>
     <h2>Take a Survey</h2>

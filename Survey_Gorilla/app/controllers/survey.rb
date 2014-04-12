@@ -9,6 +9,6 @@ get '/surveys/take/:id' do
 end
 
 post '/push_survey_data' do
-  Survey.create!()
-  erb :"surveys/show"
+  create_new_survey(params)
+  redirect to "/users/dashboard"
 end

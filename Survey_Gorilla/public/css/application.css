@@ -1,3 +1,10 @@
+.big-container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+}
+
+
 .container {
   margin: 20px auto;
   width: 600px;
