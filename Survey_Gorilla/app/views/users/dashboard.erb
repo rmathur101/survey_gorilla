@@ -22,7 +22,7 @@
 
   <ul>
     <% @user.surveys.each do |survey| %>
-      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a></li>
+      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a> <button class="delete_survey_button" href="#" value="<%= survey.id %>">Delete survey</button></li>
     <% end %>
   </ul>
 
@@ -32,7 +32,7 @@
 
   <ul>
     <% find_user_taken_surveys(@user).each do |survey| %>
-      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a> <button href="#" value="<%= survey.id %>">Delete survey</button></li>
+      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a></li>
     <% end %>
   </ul><br><br>
 <form action="/logout" method="post">
