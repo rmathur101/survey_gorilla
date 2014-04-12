@@ -7,7 +7,7 @@
     <h4><%= question.question %></h4>
     <ul>
       <% question.choices.each do |choice| %>
-        <li><%= choice.choice %>: <%= percentage_of_responses(question.id, choice.id) %>%</li>
+        <li><%= choice.choice %>: <%= percentage_of_responses(question.id, choice.id) %>% (<%= total_responses_by_choice(choice.id) %> response(s))</li>
       <% end %>
     </ul>
   <% end %>

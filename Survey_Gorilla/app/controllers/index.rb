@@ -11,3 +11,8 @@ end
 get '/create_survey' do
   erb :create_survey
 end
+
+post "/surveys/delete" do
+  survey = Survey.find(params[:id])
+  survey.destroy
+end
