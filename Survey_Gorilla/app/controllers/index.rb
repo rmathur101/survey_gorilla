@@ -6,7 +6,7 @@ end
 post '/new_user' do
   @user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   session[:user_id] = @user.id
-  erb :survey_options
+  erb :"users/dashboard"
 end
 
 post '/user' do
@@ -14,7 +14,7 @@ post '/user' do
 
   if @user &&  @user.authenticate(params[:password])
     session[:user_id] = @user.id
-    erb :survey_options
+    erb :"users/dashboard"
   else
     @error = "Wrong information, You fail at life!"
     erb :index

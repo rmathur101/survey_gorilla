@@ -1,0 +1,39 @@
+<div class="container">
+
+
+ <h1><%= @user.name %>'s Dashboard</h1>
+  <button href="#">Create Survey Now</button>
+  <!-- Going to have to link to the appropriate view -->
+  <div>
+    <h2>Take a Survey</h2>
+
+    <form id="select_survey" action="" method="">
+      <select>
+        <% Survey.all.each do |survey| %>
+          <option value="<%= survey.id %>"><%= survey.name %></option>
+        <% end %>
+      </select>
+    </form>
+  </div>
+
+<hr>
+
+<h2>Surveys Created</h2>
+
+  <ul>
+    <% @user.surveys.each do |survey| %>
+      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a></li>
+    <% end %>
+  </ul>
+
+<hr>
+
+<h2>Surveys Taken</h2>
+
+  <ul>
+    <% find_user_taken_surveys(@user).each do |survey| %>
+      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a></li>
+    <% end %>
+  </ul>
+
+</div>

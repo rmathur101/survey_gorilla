@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
   $("#sign_up").on("click", function(event){
-      event.preventDefault();
+      // event.preventDefault();
 
     $("#check_email").hide();
     $("#check_password").hide();
@@ -30,18 +30,23 @@ $(document).ready(function() {
       };
 
       if (val_email(email)){
+        event.preventDefault();
         $("#check_email").show();
+
       };
 
       if (val_password_charlength(password)){
+        event.preventDefault();
         $("#check_password").show();
       };
 
       if (val_password_capital(password)){
+        event.preventDefault();
         $("#check_password").show();
       };
 
       if (val_password_number(password)){
+        event.preventDefault();
         $("#check_password").show();
       };
   });
