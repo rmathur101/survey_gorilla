@@ -28,3 +28,8 @@ post '/push_survey_data' do
 
   erb :"users/dashboard"
 end
+
+post '/surveys/new' do
+  create_new_survey(params)
+  redirect to "/users/dashboard"
+end

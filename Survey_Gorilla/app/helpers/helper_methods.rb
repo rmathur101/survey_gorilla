@@ -35,3 +35,16 @@ def find_user_taken_surveys(user)
   end
   return survey_arr
 end
+
+def create_new_survey(params)
+  title = params[:survey][:title]
+  new_survey = Survey.create(name: title, creator_id: session[:user_id])
+  # puts new_survey.name
+  questions = params[:survey][:questions]
+  questions.each do |question|
+    new_question = new_survey.questions.create(question: question[:question])
+    question[:options].each do |choice|
+      new_question.choices.create(choice: choice)
+    end
+  end
+end
