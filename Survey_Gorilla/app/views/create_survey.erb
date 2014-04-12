@@ -1,38 +1,15 @@
 <div class="container">
 
-  <form id='create_survey' >
-
-
- <!--    <div class="question_content">
-    Question 1: <input name='survey_question_1' type='text'><br>
-        <div id="option_content">
-            Option 1 <input id="question_option" name='survey_quest_1_resp1' type='text'><br><br>
-        </div>
-            <button id="option_add_1">Add an option</button>
-            <button id="option_remove_1">Remove an option</button><br><br>
-    </div>
-
-   <div id="append_question"></div>
-
-<button id="question_add">Add a question</button>
-<button id="question_remove">Remove a question</button> -->
-</form>
-
-
-
-
-
-
-<h1>Create Survey!</h1>
-<form id='survey-builder' action="/surveys" method="post">
-  Survey Title: <input class='survey-title' name="survey[title]" placeholder="Survey">
-  <ol>
-    <!-- populated by survey_builder.js -->
-  </ol>
-  <button class='button add-question'>Add question</button>
-  <div class='bottom-border'></div>
-  <input class='button' id='create-survey' type='submit' value='Create My Survey! >>'/>
-</form>
+  <h1>Create Survey!</h1>
+  <form id='survey-builder' action="/surveys" method="post">
+    Survey Title: <input class='survey-title' name="survey[title]" placeholder="Survey">
+    <ol>
+      <!-- populated by survey_builder.js -->
+    </ol>
+    <button class='button add-question'>Add question</button>
+    <div class='bottom-border'></div>
+    <input class='button' id='create-survey' type='submit' value='Create My Survey! >>'/>
+  </form>
 
 </div>
 
