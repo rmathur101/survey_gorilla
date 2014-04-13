@@ -8,12 +8,13 @@
   <div>
     <h2>Take a Survey</h2>
 
-    <form id="select_survey" action="" method="">
-      <select>
+    <form id="select_survey" action="/surveys/take" method="post">
+      <select name="survey_id">
         <% Survey.all.each do |survey| %>
           <option value="<%= survey.id %>"><%= survey.name %></option>
         <% end %>
       </select>
+      <input type="submit" value="Take the survey">
     </form>
   </div>
 
