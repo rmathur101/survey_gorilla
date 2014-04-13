@@ -22,11 +22,11 @@
 
 <h2>Surveys Created</h2>
 
-  <select name="surveys_created">
+  <ul>
     <% @user.surveys.each do |survey| %>
       <li class="created_survey_list_item"><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a> <button class="delete_survey_button dashboard_button" href="#" value="<%= survey.id %>">Delete survey</button></li>
     <% end %>
-  </select>
+  </ul>
 
 <hr>
 
