@@ -64,3 +64,52 @@ header li:first-child {
 th {
   text-align: left;
 }
+
+button {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 100px;
+  background: linear-gradient(ivory, darkgrey);
+}
+
+button:hover {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 100px;
+  background: linear-gradient(darkgrey, ivory);
+}
+
+form input[type="submit"] {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 100px;
+  background: linear-gradient(ivory, darkgrey);
+}
+
+form input[type="submit"]:hover {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 100px;
+  background: linear-gradient(darkgrey, ivory);
+}
+
+.dashboard_button {
+  float: right;
+  margin-right: 100px;
+}
+
+.create_survey_button {
+
+}
+
+.dashboard_button:hover {
+  float: right;
+}
+
+.create_survey_button:hover {
+
+}
+
+.created_survey_list_item {
+  margin-top: 15px;
+}

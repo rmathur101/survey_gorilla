@@ -3,7 +3,7 @@
 
  <h1><%= @user.name %>'s Dashboard</h1>
 
-  <form action="/create_survey" method="get"><input type="submit" value="Create a new survey!"></form>
+  <form action="/create_survey" method="get"><input type="submit" value="Create a new Survey!"></form>
   <!-- Going to have to link to the appropriate view -->
   <div>
     <h2>Take a Survey</h2>
@@ -14,7 +14,7 @@
           <option value="<%= survey.id %>"><%= survey.name %></option>
         <% end %>
       </select>
-      <input type="submit" value="Take the survey">
+      <input class="dashboard_button" type="submit" value="Take the survey">
     </form>
   </div>
 
@@ -22,11 +22,11 @@
 
 <h2>Surveys Created</h2>
 
-  <ul>
+  <select name="surveys_created">
     <% @user.surveys.each do |survey| %>
-      <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a> <button class="delete_survey_button" href="#" value="<%= survey.id %>">Delete survey</button></li>
+      <li class="created_survey_list_item"><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a> <button class="delete_survey_button dashboard_button" href="#" value="<%= survey.id %>">Delete survey</button></li>
     <% end %>
-  </ul>
+  </select>
 
 <hr>
 
