@@ -20,6 +20,21 @@ def percentage_of_responses(question_id, choice_id)
   end
 end
 
+#NOTES
+#what is happening when we delete a survey? is all the corresponding information for that survey being deleted? --> No. Even though we are deleting the survey from the surveys table, the survey id persists in the round table and the choices table and the responses table and the questions table.
+#do we want the above information to persist? --> yes but because we are taking away the survey the target from surveys table - we are losing the name of the survey. so when we try to find which surveys a user has taken we are not able to find the name; we can accomplish this problem by making sure that we delete the survey id from the rounds table. (but then we lose the ability to access the survey data from a deleted survey)
+#what if we delete the survey id from round instead of surveys? that way we can still access the survey name but we are going to try to stop the user from starting a round with that survey? --> that won't work because when we displaying the surveys we are still using the Survey.all 
+
+#-----------------
+
+#the login/register screen allows a new user to register with an already reigstered password (but does not allow user to interact once logged in)
+
+#-------------------------
+#check validation
+
+
+#find_user_taken_surveys not working correctly - because the deletion of survey is not working correctly
+
 def find_user_taken_surveys(user)
   rounds = user.rounds
   survey_name_arr = []
