@@ -7,6 +7,6 @@ $(function(){
       $(listItem).text("This survey has been deleted.").delay(2000).slideUp(400);
       // $(listItem).remove();
     })
-  })
+  });
 
 });
