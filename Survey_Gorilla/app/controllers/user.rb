@@ -16,7 +16,7 @@ post '/user' do
 
   if @user &&  @user.authenticate(params[:password])
     session[:user_id] = @user.id
-    erb :"users/dashboard"
+    redirect to "/users/dashboard"
   else
     @error = "Wrong information, You fail at life!"
     erb :index
@@ -35,7 +35,7 @@ get '/users/dashboard' do
   end
 end
 
-post '/logout' do
+get '/logout' do
   session.clear
   redirect to "/"
 end

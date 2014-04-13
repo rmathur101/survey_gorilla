@@ -1,14 +1,7 @@
-.big-container {
-  margin: 20px auto;
-  width: 800px;
-  padding: 0px 20px 20px 20px;
-}
-
-
 .container {
-  margin: 20px auto;
+  margin: 10px auto;
   margin-top: 70px;
-  width: 600px;
+  width: 400px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
@@ -26,10 +19,7 @@ header {
   position: fixed;
   display: block;
   height: 50px;
-}
-
-li {
-  list-style: none;
+  text-align: center;
 }
 
 header a {
@@ -65,41 +55,37 @@ header li:first-child {
   margin-right: 0;
 }
 
-th {
-  text-align: left;
-}
-
 button {
   border: 1px solid black;
   border-radius: 4px;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
   background: linear-gradient(ivory, darkgrey);
 }
 
 button:hover {
   border: 1px solid black;
   border-radius: 4px;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
   background: linear-gradient(darkgrey, ivory);
 }
 
 form input[type="submit"] {
   border: 1px solid black;
   border-radius: 4px;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
   background: linear-gradient(ivory, darkgrey);
 }
 
 form input[type="submit"]:hover {
   border: 1px solid black;
   border-radius: 4px;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
   background: linear-gradient(darkgrey, ivory);
 }
 
 .dashboard_button {
   float: right;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
 }
 
 .create_survey_button {
@@ -120,4 +106,8 @@ form input[type="submit"]:hover {
 
 a {
   color: blue;
+}
+
+li {
+  list-style: none;
 }

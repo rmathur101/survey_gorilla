@@ -10,15 +10,26 @@
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" media="only screen and (min-width: 651px)" href="/css/application.css">
+  <link rel="stylesheet" media="only screen and (max-width: 650px)" href="/css/mobile.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/jay_and_ryans_js_file.js"></script>
 
-  <title>Survey Rohan!</title>
+  <title>MEGA Survey</title>
 </head>
+
 <body>
+  <header>
+    <h1><a href="/">MEGA Survey</a></h1>
+    <% if logged_in? %>
+      <ul>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/users/dashboard">Dashboard</a></li>
+      </ul>
+    <% end %>
+  </header>
   <%= yield %>
 </body>
 </html>
