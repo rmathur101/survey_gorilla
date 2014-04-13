@@ -36,10 +36,7 @@
     <% find_user_taken_surveys(@user).each do |survey| %>
       <li><a href="/surveys/show/<%= survey.id %>"><%= survey.name %></a></li>
     <% end %>
-  </ul><br><br>
-<form action="/logout" method="post">
-  <input type="submit" value="Logout">
-</form>
+  </ul>
 </div>
 
 

@@ -7,10 +7,60 @@
 
 .container {
   margin: 20px auto;
+  margin-top: 100px;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
+header {
+  /*margin: 20px auto;*/
+  /*width: 600px;*/
+  /*padding: 0px 20px 20px 20px;*/
+  /*border: 1px dotted black;*/
+  background: black;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: block;
+  height: 50px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 10%;
+  float: left;
+  line-height: 50px;
+  display: inline-block;
+}
+
+header ul {
+  margin-right: 10%;
+  height: 100%;
+  display: block;
+}
+
+header li {
+  float: right;
+  list-style: none;
+  margin-right: 10px;
+}
+
+header li:first-child {
+  margin-right: 0;
+}
+
 th {
   text-align: left;
 }

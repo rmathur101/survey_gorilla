@@ -26,7 +26,7 @@ get '/users/dashboard' do
   end
 end
 
-post '/logout' do
+get '/logout' do
   session.clear
   redirect to "/"
 end

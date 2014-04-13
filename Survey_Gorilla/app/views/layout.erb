@@ -16,9 +16,19 @@
   <script src="/js/application.js"></script>
   <script src="/js/jay_and_ryans_js_file.js"></script>
 
-  <title>Survey Rohan!</title>
+  <title>MEGA Survey</title>
 </head>
+
 <body>
+  <header>
+    <h1><a href="/">MEGA Survey</a></h1>
+    <% if logged_in? %>
+      <ul>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/users/dashboard">Dashboard</a></li>
+      </ul>
+    <% end %>
+  </header>
   <%= yield %>
 </body>
 </html>
