@@ -1,8 +1,14 @@
 
 post '/new_user' do
-  @user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
-  session[:user_id] = @user.id
-  erb :"users/dashboard"
+  @user = User.new(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+  if @user.save
+    session[:user_id] = @user.id
+    redirect to "/users/dashboard"
+  else
+    # @error = "something wrong"
+    redirect to "/?signin_error=something-wrong"
+    # erb :index
+  end
 end
 
 post '/user' do
@@ -20,6 +26,9 @@ end
 get '/users/dashboard' do
   if logged_in?
     @user = User.find(session[:user_id])
+
+    @error = params[:error]
+
     erb :"users/dashboard"
   else
     redirect to "/"

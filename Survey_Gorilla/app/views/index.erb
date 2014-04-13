@@ -32,6 +32,10 @@
       Password: <input placeholder ="Password" id = "password" type="password" name="password"><br>
       <small id="check_password" style="color: red">Hey incorrect password</small><br>
 
+      <% if @signin_error %>
+        <h2 style="color: red">Something went wrong</h2>
+      <% end %><br>
+      
       <input id="sign_up" type="submit" name="submit" value="Sign Up">
 
     </form>

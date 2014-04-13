@@ -8,7 +8,13 @@ post "/surveys/take" do
 end
 
 get '/surveys/take/:id' do
-  @survey = Survey.find(params[:id])
+  # @survey = Survey.find(params[:id])
+  @survey = Survey.where(id: params[:id]).first
+  p @survey
+  if @survey == nil
+    @survey = false
+    redirect to "/users/dashboard?error=error"
+  end
   erb :"surveys/take_survey"
 end
 

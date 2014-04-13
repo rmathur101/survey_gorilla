@@ -16,11 +16,16 @@
       </select>
       <input type="submit" value="Take the survey">
     </form>
+
+    <% if @error %> 
+      <small style="color: red">You just deleted that survey dumbass.</small> 
+    <% end %>
+
   </div>
 
 <hr>
 
-<h2>Surveys Created</h2>
+<h2>Surveys</h2>
 
   <ul>
     <% @user.surveys.each do |survey| %>

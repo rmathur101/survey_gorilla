@@ -13,3 +13,7 @@ class User < ActiveRecord::Base
   has_many :responses, through: :rounds
 
 end
+
+
+
+

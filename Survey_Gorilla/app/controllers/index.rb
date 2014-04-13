@@ -2,6 +2,9 @@ get '/' do
   # Look in app/views/index.erb
   if logged_in?
     redirect to "/users/dashboard"
+  elsif params[:signin_error]
+    	@signin_error = "Something went wrong. try again"
+    	erb :index
   else
     erb :index
   end

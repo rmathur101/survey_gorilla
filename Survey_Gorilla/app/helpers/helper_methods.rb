@@ -20,6 +20,7 @@ def percentage_of_responses(question_id, choice_id)
   end
 end
 
+
 def find_user_taken_surveys(user)
   rounds = user.rounds
   survey_name_arr = []
